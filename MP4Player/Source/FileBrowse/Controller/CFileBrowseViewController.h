@@ -12,4 +12,6 @@
 
 @property(nonatomic,copy)NSString *currentPath;
 
+@property(nonatomic,assign)BOOL showBackButton;
+
 @end

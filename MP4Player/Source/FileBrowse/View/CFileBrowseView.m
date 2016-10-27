@@ -52,7 +52,7 @@
     titleLabel=[[UILabel alloc]init];
     titleLabel.textAlignment=NSTextAlignmentCenter;
     titleLabel.textColor=ColorMake(0xFFFFFF);
-    titleLabel.font=BoldFontMake(16);
+    titleLabel.font=BoldFontMake(18);
     titleLabel.includeInLayout=YES;
     titleLabel.layout_left=[NSNumber numberWithFloat:50.0];
     titleLabel.layout_right=[NSNumber numberWithFloat:50.0];
@@ -61,6 +61,7 @@
     [topView addSubview:titleLabel];
     
     backButton=[[UIButton alloc]init];
+    backButton.hidden=YES;
     [backButton addTarget:self action:@selector(backButtonTouchHandler) forControlEvents:UIControlEventTouchUpInside];
     backButton.layout_width=50;
     backButton.layout_height=50;
@@ -71,15 +72,22 @@
     [topView addSubview:backButton];
 }
 
+-(void)setShowBackButton:(BOOL)showBackButton{
+    backButton.hidden=!showBackButton;
+}
+
+-(BOOL)showBackButton{
+    return !backButton.hidden;
+}
+
 -(void)setTitle:(NSString *)title{
     titleLabel.text=title;
 }
 
 
 -(void)backButtonTouchHandler{
-
-    NSLog(@"backButtonTouchHandler");
-
+    CEvent *event=[[CEvent alloc]initWithType:FileBrowseView_BackButton_Touch andData:self];
+    [self dispatchEvent:event];
 }
 
 @end

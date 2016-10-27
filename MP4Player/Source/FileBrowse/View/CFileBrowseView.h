@@ -9,10 +9,16 @@
 #import "Group.h"
 #import "CTableView.h"
 
+#pragma mark-Event
+#define FileBrowseView_BackButton_Touch @"FileBrowseView_BackButton_Touch"
+
 @interface CFileBrowseView : Group
 
 @property(nonatomic,strong)CTableView *fileListView;
 
 @property(nonatomic,copy)NSString *title;
+
+@property(nonatomic,assign)BOOL showBackButton;
+
 
 @end

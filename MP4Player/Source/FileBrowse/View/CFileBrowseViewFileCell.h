@@ -7,10 +7,12 @@
 //
 
 #import "CTableViewCell.h"
+#import "CFile.h"
 
-#define FileBrowseDirectoryCell_Identifier @"CFileBrowseDirectoryCell"
+#define FileBrowseViewFileCell_Identifier @"CFileBrowseViewFileCell"
 
 
-@interface CFileBrowseDirectoryCell : CTableViewCell
+@interface CFileBrowseViewFileCell : CTableViewCell
+
 
 @end

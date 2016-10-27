@@ -20,7 +20,7 @@
 #import "UIMacro.h"
 #import "UtilityMacro.h"
 #import "HYFileManager.h"
-
+#import <AVFoundation/AVFoundation.h>
 
 
 #endif /* PrefixHeader_pch */

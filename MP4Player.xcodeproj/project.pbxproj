@@ -33,11 +33,12 @@
 		C6D111661DC087B200BAB6ED /* UILabel+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111651DC087B200BAB6ED /* UILabel+Measure.m */; };
 		C6D1116A1DC087FA00BAB6ED /* CBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111691DC087FA00BAB6ED /* CBaseViewController.m */; };
 		C6D1116F1DC091E000BAB6ED /* CVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */; };
-		C6D111721DC0920300BAB6ED /* CFileBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111711DC0920300BAB6ED /* CFileBrowseViewController.m */; };
 		C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111741DC0928400BAB6ED /* AppDelegate.m */; };
 		C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111771DC093C500BAB6ED /* CRootNavigationController.m */; };
-		C6F80DA11DC0A605002B3AD7 /* CFileBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DA01DC0A605002B3AD7 /* CFileBrowseView.m */; };
-		C6F80DA41DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DA31DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m */; };
+		C6F80DAE1DC1D705002B3AD7 /* CFileBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DA71DC1D705002B3AD7 /* CFileBrowseViewController.m */; };
+		C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m */; };
+		C6F80DB01DC1D705002B3AD7 /* CFileBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */; };
+		C6F80DB31DC1D722002B3AD7 /* CFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DB21DC1D722002B3AD7 /* CFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,18 +95,20 @@
 		C6D111691DC087FA00BAB6ED /* CBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBaseViewController.m; sourceTree = "<group>"; };
 		C6D1116D1DC091E000BAB6ED /* CVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayerViewController.h; sourceTree = "<group>"; };
 		C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerViewController.m; sourceTree = "<group>"; };
-		C6D111701DC0920300BAB6ED /* CFileBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewController.h; sourceTree = "<group>"; };
-		C6D111711DC0920300BAB6ED /* CFileBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewController.m; sourceTree = "<group>"; };
 		C6D111731DC0928400BAB6ED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6D111741DC0928400BAB6ED /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C6D111761DC093C500BAB6ED /* CRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRootNavigationController.h; sourceTree = "<group>"; };
 		C6D111771DC093C500BAB6ED /* CRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRootNavigationController.m; sourceTree = "<group>"; };
 		C6F80D9D1DC09945002B3AD7 /* UIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMacro.h; sourceTree = "<group>"; };
 		C6F80D9E1DC09945002B3AD7 /* UtilityMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityMacro.h; sourceTree = "<group>"; };
-		C6F80D9F1DC0A605002B3AD7 /* CFileBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseView.h; sourceTree = "<group>"; };
-		C6F80DA01DC0A605002B3AD7 /* CFileBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseView.m; sourceTree = "<group>"; };
-		C6F80DA21DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseDirectoryCell.h; sourceTree = "<group>"; };
-		C6F80DA31DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseDirectoryCell.m; sourceTree = "<group>"; };
+		C6F80DA61DC1D705002B3AD7 /* CFileBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewController.h; sourceTree = "<group>"; };
+		C6F80DA71DC1D705002B3AD7 /* CFileBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewController.m; sourceTree = "<group>"; };
+		C6F80DAA1DC1D705002B3AD7 /* CFileBrowseViewFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewFileCell.h; sourceTree = "<group>"; };
+		C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewFileCell.m; sourceTree = "<group>"; };
+		C6F80DAC1DC1D705002B3AD7 /* CFileBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseView.h; sourceTree = "<group>"; };
+		C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseView.m; sourceTree = "<group>"; };
+		C6F80DB11DC1D722002B3AD7 /* CFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFile.h; sourceTree = "<group>"; };
+		C6F80DB21DC1D722002B3AD7 /* CFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFile.m; sourceTree = "<group>"; };
 		DE041AD362680E9A779A19CE /* Pods-MP4Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MP4Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-MP4Player/Pods-MP4Player.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -358,12 +361,9 @@
 		C6D1116C1DC08EB200BAB6ED /* FileBrowse */ = {
 			isa = PBXGroup;
 			children = (
-				C6D111701DC0920300BAB6ED /* CFileBrowseViewController.h */,
-				C6D111711DC0920300BAB6ED /* CFileBrowseViewController.m */,
-				C6F80D9F1DC0A605002B3AD7 /* CFileBrowseView.h */,
-				C6F80DA01DC0A605002B3AD7 /* CFileBrowseView.m */,
-				C6F80DA21DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.h */,
-				C6F80DA31DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m */,
+				C6F80DA51DC1D705002B3AD7 /* Controller */,
+				C6F80DA81DC1D705002B3AD7 /* Model */,
+				C6F80DA91DC1D705002B3AD7 /* View */,
 			);
 			path = FileBrowse;
 			sourceTree = "<group>";
@@ -375,6 +375,35 @@
 				C6F80D9E1DC09945002B3AD7 /* UtilityMacro.h */,
 			);
 			path = Macro;
+			sourceTree = "<group>";
+		};
+		C6F80DA51DC1D705002B3AD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6F80DA61DC1D705002B3AD7 /* CFileBrowseViewController.h */,
+				C6F80DA71DC1D705002B3AD7 /* CFileBrowseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C6F80DA81DC1D705002B3AD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6F80DB11DC1D722002B3AD7 /* CFile.h */,
+				C6F80DB21DC1D722002B3AD7 /* CFile.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6F80DA91DC1D705002B3AD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6F80DAA1DC1D705002B3AD7 /* CFileBrowseViewFileCell.h */,
+				C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m */,
+				C6F80DAC1DC1D705002B3AD7 /* CFileBrowseView.h */,
+				C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,6 +530,7 @@
 				C6D111591DC0857B00BAB6ED /* Box.m in Sources */,
 				C6D1114E1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m in Sources */,
 				C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */,
+				C6F80DB31DC1D722002B3AD7 /* CFile.m in Sources */,
 				C6D111601DC0857B00BAB6ED /* NSTimer+Activate.m in Sources */,
 				C63D51651DBF532400269CC4 /* main.m in Sources */,
 				C6D111581DC0857B00BAB6ED /* CTableViewCell.m in Sources */,
@@ -509,21 +539,21 @@
 				C6D111521DC0857B00BAB6ED /* CButton.m in Sources */,
 				C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */,
 				C6D111551DC0857B00BAB6ED /* CAlertView.m in Sources */,
-				C6F80DA41DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m in Sources */,
 				C6D1116A1DC087FA00BAB6ED /* CBaseViewController.m in Sources */,
 				C6D111501DC0857B00BAB6ED /* JastorRuntimeHelper.m in Sources */,
 				C6D1115D1DC0857B00BAB6ED /* VBox.m in Sources */,
+				C6F80DAE1DC1D705002B3AD7 /* CFileBrowseViewController.m in Sources */,
 				C6D111561DC0857B00BAB6ED /* CCycleScrollView.m in Sources */,
-				C6D111721DC0920300BAB6ED /* CFileBrowseViewController.m in Sources */,
 				C6D1115F1DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m in Sources */,
 				C6D1115C1DC0857B00BAB6ED /* UIView+LayoutElement.m in Sources */,
 				C6D111541DC0857B00BAB6ED /* IMRadioButton.m in Sources */,
+				C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m in Sources */,
 				C6D111531DC0857B00BAB6ED /* IMCheckBox.m in Sources */,
 				C6D1115B1DC0857B00BAB6ED /* HBox.m in Sources */,
 				C6D1116F1DC091E000BAB6ED /* CVideoPlayerViewController.m in Sources */,
 				C6D111511DC0857B00BAB6ED /* UIColor+Hex.m in Sources */,
+				C6F80DB01DC1D705002B3AD7 /* CFileBrowseView.m in Sources */,
 				C6D1114D1DC0857B00BAB6ED /* CEvent.m in Sources */,
-				C6F80DA11DC0A605002B3AD7 /* CFileBrowseView.m in Sources */,
 				C6D1114F1DC0857B00BAB6ED /* Jastor.m in Sources */,
 				C6D111571DC0857B00BAB6ED /* CTableView.m in Sources */,
 				C6D1115A1DC0857B00BAB6ED /* Group.m in Sources */,

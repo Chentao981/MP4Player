@@ -21,6 +21,9 @@
 
 +(CRootNavigationController *)rootNavigationController{
     CFileBrowseViewController *documentDirectoryViewController=[[CFileBrowseViewController alloc]init];
+    documentDirectoryViewController.currentPath=[HYFileManager documentsDir];
+    documentDirectoryViewController.title=@"本地文件";
+
     CRootNavigationController *rootNavigationController=[[CRootNavigationController alloc]initWithRootViewController:documentDirectoryViewController];
     
     return rootNavigationController;
