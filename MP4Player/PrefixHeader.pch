@@ -21,6 +21,7 @@
 #import "UtilityMacro.h"
 #import "HYFileManager.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "JGProgressHUD.h"
+#import "CHUDManagement.h"
 
 #endif /* PrefixHeader_pch */

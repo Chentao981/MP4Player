@@ -19,7 +19,9 @@
 
 @end
 
-@implementation CFileBrowseViewController
+@implementation CFileBrowseViewController{
+    BOOL firstLoad;
+}
 
 -(NSMutableArray<CFile *> *)dataSource{
     if (!_dataSource) {
@@ -46,14 +48,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self initDatas];
-    [self.fileBrowseView.fileListView reloadData];
 }
 
--(void)initDatas{
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if (!firstLoad) {
+        [self loadDatas];
+    }
+}
+
+-(void)loadDatas{
+    NSString *hudIdentifier=[NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+    [[CHUDManagement sharedInstance] showLoadingHUDWithIdentifier:hudIdentifier text:nil inView:self.view];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self generationDatas];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[CHUDManagement sharedInstance] dismissHUDWithIdentifier:hudIdentifier animated:YES];
+            [self.fileBrowseView.fileListView reloadData];
+        });
+    });
+    firstLoad=YES;
+}
+
+-(void)generationDatas{
+    [self.dataSource removeAllObjects];
     NSArray *files=[HYFileManager listFilesInDirectoryAtPath:self.currentPath deep:NO];
-    //    [files pathsMatchingExtensions:@[@"mp4"]];
-    
     for (NSString *fileName in files) {
         if ([fileName hasPrefix:@".DS"]) {
             continue;
@@ -103,7 +122,9 @@
     NSDictionary *options = @{ AVURLAssetPreferPreciseDurationAndTimingKey:@YES };
     AVURLAsset *videoAsset = [[AVURLAsset alloc]initWithURL:videoURL options:options];
     AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:videoAsset];
-    CMTime midpoint = CMTimeMakeWithSeconds(1, 600);
+    
+    Float64 durationSeconds = CMTimeGetSeconds([videoAsset duration]);
+    CMTime midpoint = CMTimeMakeWithSeconds(durationSeconds * 0.5, 600);
     NSError *error;
     CMTime actualTime;
     CGImageRef halfWayImage = [imageGenerator copyCGImageAtTime:midpoint actualTime:&actualTime error:&error];

@@ -9,5 +9,6 @@ target 'MP4Player' do
 
 pod 'HYFileManager', '~> 0.1.2'
 
+pod 'JGProgressHUD', '~> 1.4'
 
 end

@@ -30,6 +30,8 @@
 //    [self.contentView addSubview:scrollContentView];
     
     iconView=[[UIImageView alloc]init];
+    iconView.layer.borderColor=GapLineColor.CGColor;
+    iconView.layer.borderWidth=0.5;
     iconView.clipsToBounds=YES;
     iconView.contentMode=UIViewContentModeScaleAspectFill;
     [self.contentView addSubview:iconView];
@@ -65,6 +67,12 @@
     CGSize titleLabelSize=[titleLabel measureSize];
     CGFloat titleLabelX=CGRectGetMaxX(iconView.frame)+20;
     CGFloat titleLabelY=0.5*(viewHeight-titleLabelSize.height);
+    
+    CGFloat titleLabelMaxWidth=viewWidth-PageRightPadding-titleLabelX;
+    if (titleLabelSize.width>titleLabelMaxWidth) {
+        titleLabelSize.width=titleLabelMaxWidth;
+    }
+    
     titleLabel.frame=CGRectMake(titleLabelX, titleLabelY, titleLabelSize.width, titleLabelSize.height);
     
     

@@ -39,6 +39,11 @@
 		C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m */; };
 		C6F80DB01DC1D705002B3AD7 /* CFileBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */; };
 		C6F80DB31DC1D722002B3AD7 /* CFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DB21DC1D722002B3AD7 /* CFile.m */; };
+		C6F80DCF1DC20D12002B3AD7 /* CHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DC61DC20D12002B3AD7 /* CHUD.m */; };
+		C6F80DD01DC20D12002B3AD7 /* CHUDManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DC81DC20D12002B3AD7 /* CHUDManagement.m */; };
+		C6F80DD11DC20D12002B3AD7 /* CLoadingHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DCA1DC20D12002B3AD7 /* CLoadingHUDIndicatorView.m */; };
+		C6F80DD21DC20D12002B3AD7 /* CPromptHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DCC1DC20D12002B3AD7 /* CPromptHUDIndicatorView.m */; };
+		C6F80DD31DC20D12002B3AD7 /* CSuccessHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DCE1DC20D12002B3AD7 /* CSuccessHUDIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +114,16 @@
 		C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseView.m; sourceTree = "<group>"; };
 		C6F80DB11DC1D722002B3AD7 /* CFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFile.h; sourceTree = "<group>"; };
 		C6F80DB21DC1D722002B3AD7 /* CFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFile.m; sourceTree = "<group>"; };
+		C6F80DC51DC20D12002B3AD7 /* CHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUD.h; sourceTree = "<group>"; };
+		C6F80DC61DC20D12002B3AD7 /* CHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUD.m; sourceTree = "<group>"; };
+		C6F80DC71DC20D12002B3AD7 /* CHUDManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUDManagement.h; sourceTree = "<group>"; };
+		C6F80DC81DC20D12002B3AD7 /* CHUDManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUDManagement.m; sourceTree = "<group>"; };
+		C6F80DC91DC20D12002B3AD7 /* CLoadingHUDIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLoadingHUDIndicatorView.h; sourceTree = "<group>"; };
+		C6F80DCA1DC20D12002B3AD7 /* CLoadingHUDIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLoadingHUDIndicatorView.m; sourceTree = "<group>"; };
+		C6F80DCB1DC20D12002B3AD7 /* CPromptHUDIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPromptHUDIndicatorView.h; sourceTree = "<group>"; };
+		C6F80DCC1DC20D12002B3AD7 /* CPromptHUDIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPromptHUDIndicatorView.m; sourceTree = "<group>"; };
+		C6F80DCD1DC20D12002B3AD7 /* CSuccessHUDIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSuccessHUDIndicatorView.h; sourceTree = "<group>"; };
+		C6F80DCE1DC20D12002B3AD7 /* CSuccessHUDIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSuccessHUDIndicatorView.m; sourceTree = "<group>"; };
 		DE041AD362680E9A779A19CE /* Pods-MP4Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MP4Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-MP4Player/Pods-MP4Player.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +264,7 @@
 		C6D111251DC0857B00BAB6ED /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				C6F80DC41DC20D12002B3AD7 /* HUDManagement */,
 				C6D111631DC087B200BAB6ED /* Label */,
 				C6D111261DC0857B00BAB6ED /* Button */,
 				C6D1112D1DC0857B00BAB6ED /* CAlertView */,
@@ -406,6 +422,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C6F80DC41DC20D12002B3AD7 /* HUDManagement */ = {
+			isa = PBXGroup;
+			children = (
+				C6F80DC51DC20D12002B3AD7 /* CHUD.h */,
+				C6F80DC61DC20D12002B3AD7 /* CHUD.m */,
+				C6F80DC71DC20D12002B3AD7 /* CHUDManagement.h */,
+				C6F80DC81DC20D12002B3AD7 /* CHUDManagement.m */,
+				C6F80DC91DC20D12002B3AD7 /* CLoadingHUDIndicatorView.h */,
+				C6F80DCA1DC20D12002B3AD7 /* CLoadingHUDIndicatorView.m */,
+				C6F80DCB1DC20D12002B3AD7 /* CPromptHUDIndicatorView.h */,
+				C6F80DCC1DC20D12002B3AD7 /* CPromptHUDIndicatorView.m */,
+				C6F80DCD1DC20D12002B3AD7 /* CSuccessHUDIndicatorView.h */,
+				C6F80DCE1DC20D12002B3AD7 /* CSuccessHUDIndicatorView.m */,
+			);
+			path = HUDManagement;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -529,15 +562,20 @@
 			files = (
 				C6D111591DC0857B00BAB6ED /* Box.m in Sources */,
 				C6D1114E1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m in Sources */,
+				C6F80DD11DC20D12002B3AD7 /* CLoadingHUDIndicatorView.m in Sources */,
 				C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */,
+				C6F80DD31DC20D12002B3AD7 /* CSuccessHUDIndicatorView.m in Sources */,
 				C6F80DB31DC1D722002B3AD7 /* CFile.m in Sources */,
 				C6D111601DC0857B00BAB6ED /* NSTimer+Activate.m in Sources */,
 				C63D51651DBF532400269CC4 /* main.m in Sources */,
 				C6D111581DC0857B00BAB6ED /* CTableViewCell.m in Sources */,
+				C6F80DCF1DC20D12002B3AD7 /* CHUD.m in Sources */,
 				C6D1115E1DC0857B00BAB6ED /* NSDate+Format.m in Sources */,
 				C6D111661DC087B200BAB6ED /* UILabel+Measure.m in Sources */,
 				C6D111521DC0857B00BAB6ED /* CButton.m in Sources */,
+				C6F80DD21DC20D12002B3AD7 /* CPromptHUDIndicatorView.m in Sources */,
 				C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */,
+				C6F80DD01DC20D12002B3AD7 /* CHUDManagement.m in Sources */,
 				C6D111551DC0857B00BAB6ED /* CAlertView.m in Sources */,
 				C6D1116A1DC087FA00BAB6ED /* CBaseViewController.m in Sources */,
 				C6D111501DC0857B00BAB6ED /* JastorRuntimeHelper.m in Sources */,
