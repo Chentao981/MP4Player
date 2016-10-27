@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3585B2AD1891E4F5ADA4D02E /* libPods-MP4Player.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B65F0BDDC0BFBF31C43C1EA9 /* libPods-MP4Player.a */; };
+		C63D51651DBF532400269CC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C63D51641DBF532400269CC4 /* main.m */; };
+		C63D516A1DBF532400269CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C63D51691DBF532400269CC4 /* Assets.xcassets */; };
+		C6D1114D1DC0857B00BAB6ED /* CEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111A1DC0857B00BAB6ED /* CEvent.m */; };
+		C6D1114E1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111C1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m */; };
+		C6D1114F1DC0857B00BAB6ED /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111F1DC0857B00BAB6ED /* Jastor.m */; };
+		C6D111501DC0857B00BAB6ED /* JastorRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111211DC0857B00BAB6ED /* JastorRuntimeHelper.m */; };
+		C6D111511DC0857B00BAB6ED /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111241DC0857B00BAB6ED /* UIColor+Hex.m */; };
+		C6D111521DC0857B00BAB6ED /* CButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111281DC0857B00BAB6ED /* CButton.m */; };
+		C6D111531DC0857B00BAB6ED /* IMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1112A1DC0857B00BAB6ED /* IMCheckBox.m */; };
+		C6D111541DC0857B00BAB6ED /* IMRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1112C1DC0857B00BAB6ED /* IMRadioButton.m */; };
+		C6D111551DC0857B00BAB6ED /* CAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1112F1DC0857B00BAB6ED /* CAlertView.m */; };
+		C6D111561DC0857B00BAB6ED /* CCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111321DC0857B00BAB6ED /* CCycleScrollView.m */; };
+		C6D111571DC0857B00BAB6ED /* CTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111351DC0857B00BAB6ED /* CTableView.m */; };
+		C6D111581DC0857B00BAB6ED /* CTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111371DC0857B00BAB6ED /* CTableViewCell.m */; };
+		C6D111591DC0857B00BAB6ED /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1113A1DC0857B00BAB6ED /* Box.m */; };
+		C6D1115A1DC0857B00BAB6ED /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1113C1DC0857B00BAB6ED /* Group.m */; };
+		C6D1115B1DC0857B00BAB6ED /* HBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1113E1DC0857B00BAB6ED /* HBox.m */; };
+		C6D1115C1DC0857B00BAB6ED /* UIView+LayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111401DC0857B00BAB6ED /* UIView+LayoutElement.m */; };
+		C6D1115D1DC0857B00BAB6ED /* VBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111421DC0857B00BAB6ED /* VBox.m */; };
+		C6D1115E1DC0857B00BAB6ED /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111451DC0857B00BAB6ED /* NSDate+Format.m */; };
+		C6D1115F1DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111471DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m */; };
+		C6D111601DC0857B00BAB6ED /* NSTimer+Activate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111491DC0857B00BAB6ED /* NSTimer+Activate.m */; };
+		C6D111661DC087B200BAB6ED /* UILabel+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111651DC087B200BAB6ED /* UILabel+Measure.m */; };
+		C6D1116A1DC087FA00BAB6ED /* CBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111691DC087FA00BAB6ED /* CBaseViewController.m */; };
+		C6D1116F1DC091E000BAB6ED /* CVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */; };
+		C6D111721DC0920300BAB6ED /* CFileBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111711DC0920300BAB6ED /* CFileBrowseViewController.m */; };
+		C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111741DC0928400BAB6ED /* AppDelegate.m */; };
+		C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111771DC093C500BAB6ED /* CRootNavigationController.m */; };
+		C6F80DA11DC0A605002B3AD7 /* CFileBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DA01DC0A605002B3AD7 /* CFileBrowseView.m */; };
+		C6F80DA41DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DA31DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F9B4D18A9F947FE7633A69C /* Pods-MP4Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MP4Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MP4Player/Pods-MP4Player.debug.xcconfig"; sourceTree = "<group>"; };
+		B65F0BDDC0BFBF31C43C1EA9 /* libPods-MP4Player.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MP4Player.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C63D51601DBF532400269CC4 /* MP4Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MP4Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C63D51641DBF532400269CC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C63D51691DBF532400269CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C63D516E1DBF532400269CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D111191DC0857B00BAB6ED /* CEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEvent.h; sourceTree = "<group>"; };
+		C6D1111A1DC0857B00BAB6ED /* CEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEvent.m; sourceTree = "<group>"; };
+		C6D1111B1DC0857B00BAB6ED /* NSObject+CEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CEventDispatcher.h"; sourceTree = "<group>"; };
+		C6D1111C1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CEventDispatcher.m"; sourceTree = "<group>"; };
+		C6D1111E1DC0857B00BAB6ED /* Jastor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jastor.h; sourceTree = "<group>"; };
+		C6D1111F1DC0857B00BAB6ED /* Jastor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jastor.m; sourceTree = "<group>"; };
+		C6D111201DC0857B00BAB6ED /* JastorRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JastorRuntimeHelper.h; sourceTree = "<group>"; };
+		C6D111211DC0857B00BAB6ED /* JastorRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JastorRuntimeHelper.m; sourceTree = "<group>"; };
+		C6D111231DC0857B00BAB6ED /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		C6D111241DC0857B00BAB6ED /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		C6D111271DC0857B00BAB6ED /* CButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CButton.h; sourceTree = "<group>"; };
+		C6D111281DC0857B00BAB6ED /* CButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CButton.m; sourceTree = "<group>"; };
+		C6D111291DC0857B00BAB6ED /* IMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCheckBox.h; sourceTree = "<group>"; };
+		C6D1112A1DC0857B00BAB6ED /* IMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCheckBox.m; sourceTree = "<group>"; };
+		C6D1112B1DC0857B00BAB6ED /* IMRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMRadioButton.h; sourceTree = "<group>"; };
+		C6D1112C1DC0857B00BAB6ED /* IMRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMRadioButton.m; sourceTree = "<group>"; };
+		C6D1112E1DC0857B00BAB6ED /* CAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAlertView.h; sourceTree = "<group>"; };
+		C6D1112F1DC0857B00BAB6ED /* CAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAlertView.m; sourceTree = "<group>"; };
+		C6D111311DC0857B00BAB6ED /* CCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCycleScrollView.h; sourceTree = "<group>"; };
+		C6D111321DC0857B00BAB6ED /* CCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCycleScrollView.m; sourceTree = "<group>"; };
+		C6D111341DC0857B00BAB6ED /* CTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTableView.h; sourceTree = "<group>"; };
+		C6D111351DC0857B00BAB6ED /* CTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTableView.m; sourceTree = "<group>"; };
+		C6D111361DC0857B00BAB6ED /* CTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTableViewCell.h; sourceTree = "<group>"; };
+		C6D111371DC0857B00BAB6ED /* CTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTableViewCell.m; sourceTree = "<group>"; };
+		C6D111391DC0857B00BAB6ED /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		C6D1113A1DC0857B00BAB6ED /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
+		C6D1113B1DC0857B00BAB6ED /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		C6D1113C1DC0857B00BAB6ED /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		C6D1113D1DC0857B00BAB6ED /* HBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBox.h; sourceTree = "<group>"; };
+		C6D1113E1DC0857B00BAB6ED /* HBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBox.m; sourceTree = "<group>"; };
+		C6D1113F1DC0857B00BAB6ED /* UIView+LayoutElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutElement.h"; sourceTree = "<group>"; };
+		C6D111401DC0857B00BAB6ED /* UIView+LayoutElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutElement.m"; sourceTree = "<group>"; };
+		C6D111411DC0857B00BAB6ED /* VBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBox.h; sourceTree = "<group>"; };
+		C6D111421DC0857B00BAB6ED /* VBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBox.m; sourceTree = "<group>"; };
+		C6D111441DC0857B00BAB6ED /* NSDate+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
+		C6D111451DC0857B00BAB6ED /* NSDate+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Format.m"; sourceTree = "<group>"; };
+		C6D111461DC0857B00BAB6ED /* NSMutableDictionary+SetValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SetValue.h"; sourceTree = "<group>"; };
+		C6D111471DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SetValue.m"; sourceTree = "<group>"; };
+		C6D111481DC0857B00BAB6ED /* NSTimer+Activate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Activate.h"; sourceTree = "<group>"; };
+		C6D111491DC0857B00BAB6ED /* NSTimer+Activate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Activate.m"; sourceTree = "<group>"; };
+		C6D111621DC086CD00BAB6ED /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C6D111641DC087B200BAB6ED /* UILabel+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Measure.h"; sourceTree = "<group>"; };
+		C6D111651DC087B200BAB6ED /* UILabel+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Measure.m"; sourceTree = "<group>"; };
+		C6D111681DC087FA00BAB6ED /* CBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBaseViewController.h; sourceTree = "<group>"; };
+		C6D111691DC087FA00BAB6ED /* CBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBaseViewController.m; sourceTree = "<group>"; };
+		C6D1116D1DC091E000BAB6ED /* CVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayerViewController.h; sourceTree = "<group>"; };
+		C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerViewController.m; sourceTree = "<group>"; };
+		C6D111701DC0920300BAB6ED /* CFileBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewController.h; sourceTree = "<group>"; };
+		C6D111711DC0920300BAB6ED /* CFileBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewController.m; sourceTree = "<group>"; };
+		C6D111731DC0928400BAB6ED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C6D111741DC0928400BAB6ED /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C6D111761DC093C500BAB6ED /* CRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRootNavigationController.h; sourceTree = "<group>"; };
+		C6D111771DC093C500BAB6ED /* CRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRootNavigationController.m; sourceTree = "<group>"; };
+		C6F80D9D1DC09945002B3AD7 /* UIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMacro.h; sourceTree = "<group>"; };
+		C6F80D9E1DC09945002B3AD7 /* UtilityMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityMacro.h; sourceTree = "<group>"; };
+		C6F80D9F1DC0A605002B3AD7 /* CFileBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseView.h; sourceTree = "<group>"; };
+		C6F80DA01DC0A605002B3AD7 /* CFileBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseView.m; sourceTree = "<group>"; };
+		C6F80DA21DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseDirectoryCell.h; sourceTree = "<group>"; };
+		C6F80DA31DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseDirectoryCell.m; sourceTree = "<group>"; };
+		DE041AD362680E9A779A19CE /* Pods-MP4Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MP4Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-MP4Player/Pods-MP4Player.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C63D515D1DBF532400269CC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3585B2AD1891E4F5ADA4D02E /* libPods-MP4Player.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DDB62093CA5C958D7B382DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B65F0BDDC0BFBF31C43C1EA9 /* libPods-MP4Player.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B90FC9421050CA7C2B8063D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F9B4D18A9F947FE7633A69C /* Pods-MP4Player.debug.xcconfig */,
+				DE041AD362680E9A779A19CE /* Pods-MP4Player.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C63D51571DBF532400269CC4 = {
+			isa = PBXGroup;
+			children = (
+				C63D51621DBF532400269CC4 /* MP4Player */,
+				C63D51611DBF532400269CC4 /* Products */,
+				5B90FC9421050CA7C2B8063D /* Pods */,
+				4DDB62093CA5C958D7B382DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C63D51611DBF532400269CC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C63D51601DBF532400269CC4 /* MP4Player.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C63D51621DBF532400269CC4 /* MP4Player */ = {
+			isa = PBXGroup;
+			children = (
+				C63D51771DBF53A600269CC4 /* Source */,
+				C63D51631DBF532400269CC4 /* Supporting Files */,
+				C63D51691DBF532400269CC4 /* Assets.xcassets */,
+			);
+			path = MP4Player;
+			sourceTree = "<group>";
+		};
+		C63D51631DBF532400269CC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C63D516E1DBF532400269CC4 /* Info.plist */,
+				C63D51641DBF532400269CC4 /* main.m */,
+				C6D111621DC086CD00BAB6ED /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C63D51771DBF53A600269CC4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C6F80D991DC09945002B3AD7 /* Macro */,
+				C6D111731DC0928400BAB6ED /* AppDelegate.h */,
+				C6D111741DC0928400BAB6ED /* AppDelegate.m */,
+				C6D111761DC093C500BAB6ED /* CRootNavigationController.h */,
+				C6D111771DC093C500BAB6ED /* CRootNavigationController.m */,
+				C6D1116C1DC08EB200BAB6ED /* FileBrowse */,
+				C6D1116B1DC08E4000BAB6ED /* VideoPlayer */,
+				C6D111671DC087DF00BAB6ED /* Base */,
+				C6D111161DC0857B00BAB6ED /* Components */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C6D111161DC0857B00BAB6ED /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111171DC0857B00BAB6ED /* Common */,
+				C6D111251DC0857B00BAB6ED /* UIComponent */,
+				C6D111431DC0857B00BAB6ED /* Utility */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C6D111171DC0857B00BAB6ED /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111181DC0857B00BAB6ED /* EventDispatcher */,
+				C6D1111D1DC0857B00BAB6ED /* Jastor0.2.1 */,
+				C6D111221DC0857B00BAB6ED /* UIColor */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C6D111181DC0857B00BAB6ED /* EventDispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111191DC0857B00BAB6ED /* CEvent.h */,
+				C6D1111A1DC0857B00BAB6ED /* CEvent.m */,
+				C6D1111B1DC0857B00BAB6ED /* NSObject+CEventDispatcher.h */,
+				C6D1111C1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m */,
+			);
+			path = EventDispatcher;
+			sourceTree = "<group>";
+		};
+		C6D1111D1DC0857B00BAB6ED /* Jastor0.2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				C6D1111E1DC0857B00BAB6ED /* Jastor.h */,
+				C6D1111F1DC0857B00BAB6ED /* Jastor.m */,
+				C6D111201DC0857B00BAB6ED /* JastorRuntimeHelper.h */,
+				C6D111211DC0857B00BAB6ED /* JastorRuntimeHelper.m */,
+			);
+			path = Jastor0.2.1;
+			sourceTree = "<group>";
+		};
+		C6D111221DC0857B00BAB6ED /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111231DC0857B00BAB6ED /* UIColor+Hex.h */,
+				C6D111241DC0857B00BAB6ED /* UIColor+Hex.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		C6D111251DC0857B00BAB6ED /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111631DC087B200BAB6ED /* Label */,
+				C6D111261DC0857B00BAB6ED /* Button */,
+				C6D1112D1DC0857B00BAB6ED /* CAlertView */,
+				C6D111301DC0857B00BAB6ED /* CCycleScrollView */,
+				C6D111331DC0857B00BAB6ED /* CTableView */,
+				C6D111381DC0857B00BAB6ED /* UILayout */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		C6D111261DC0857B00BAB6ED /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111271DC0857B00BAB6ED /* CButton.h */,
+				C6D111281DC0857B00BAB6ED /* CButton.m */,
+				C6D111291DC0857B00BAB6ED /* IMCheckBox.h */,
+				C6D1112A1DC0857B00BAB6ED /* IMCheckBox.m */,
+				C6D1112B1DC0857B00BAB6ED /* IMRadioButton.h */,
+				C6D1112C1DC0857B00BAB6ED /* IMRadioButton.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		C6D1112D1DC0857B00BAB6ED /* CAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				C6D1112E1DC0857B00BAB6ED /* CAlertView.h */,
+				C6D1112F1DC0857B00BAB6ED /* CAlertView.m */,
+			);
+			path = CAlertView;
+			sourceTree = "<group>";
+		};
+		C6D111301DC0857B00BAB6ED /* CCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111311DC0857B00BAB6ED /* CCycleScrollView.h */,
+				C6D111321DC0857B00BAB6ED /* CCycleScrollView.m */,
+			);
+			path = CCycleScrollView;
+			sourceTree = "<group>";
+		};
+		C6D111331DC0857B00BAB6ED /* CTableView */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111341DC0857B00BAB6ED /* CTableView.h */,
+				C6D111351DC0857B00BAB6ED /* CTableView.m */,
+				C6D111361DC0857B00BAB6ED /* CTableViewCell.h */,
+				C6D111371DC0857B00BAB6ED /* CTableViewCell.m */,
+			);
+			path = CTableView;
+			sourceTree = "<group>";
+		};
+		C6D111381DC0857B00BAB6ED /* UILayout */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111391DC0857B00BAB6ED /* Box.h */,
+				C6D1113A1DC0857B00BAB6ED /* Box.m */,
+				C6D1113B1DC0857B00BAB6ED /* Group.h */,
+				C6D1113C1DC0857B00BAB6ED /* Group.m */,
+				C6D1113D1DC0857B00BAB6ED /* HBox.h */,
+				C6D1113E1DC0857B00BAB6ED /* HBox.m */,
+				C6D1113F1DC0857B00BAB6ED /* UIView+LayoutElement.h */,
+				C6D111401DC0857B00BAB6ED /* UIView+LayoutElement.m */,
+				C6D111411DC0857B00BAB6ED /* VBox.h */,
+				C6D111421DC0857B00BAB6ED /* VBox.m */,
+			);
+			path = UILayout;
+			sourceTree = "<group>";
+		};
+		C6D111431DC0857B00BAB6ED /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111441DC0857B00BAB6ED /* NSDate+Format.h */,
+				C6D111451DC0857B00BAB6ED /* NSDate+Format.m */,
+				C6D111461DC0857B00BAB6ED /* NSMutableDictionary+SetValue.h */,
+				C6D111471DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m */,
+				C6D111481DC0857B00BAB6ED /* NSTimer+Activate.h */,
+				C6D111491DC0857B00BAB6ED /* NSTimer+Activate.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C6D111631DC087B200BAB6ED /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111641DC087B200BAB6ED /* UILabel+Measure.h */,
+				C6D111651DC087B200BAB6ED /* UILabel+Measure.m */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		C6D111671DC087DF00BAB6ED /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111681DC087FA00BAB6ED /* CBaseViewController.h */,
+				C6D111691DC087FA00BAB6ED /* CBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C6D1116B1DC08E4000BAB6ED /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C6D1116D1DC091E000BAB6ED /* CVideoPlayerViewController.h */,
+				C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		C6D1116C1DC08EB200BAB6ED /* FileBrowse */ = {
+			isa = PBXGroup;
+			children = (
+				C6D111701DC0920300BAB6ED /* CFileBrowseViewController.h */,
+				C6D111711DC0920300BAB6ED /* CFileBrowseViewController.m */,
+				C6F80D9F1DC0A605002B3AD7 /* CFileBrowseView.h */,
+				C6F80DA01DC0A605002B3AD7 /* CFileBrowseView.m */,
+				C6F80DA21DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.h */,
+				C6F80DA31DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m */,
+			);
+			path = FileBrowse;
+			sourceTree = "<group>";
+		};
+		C6F80D991DC09945002B3AD7 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C6F80D9D1DC09945002B3AD7 /* UIMacro.h */,
+				C6F80D9E1DC09945002B3AD7 /* UtilityMacro.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C63D515F1DBF532400269CC4 /* MP4Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C63D51711DBF532400269CC4 /* Build configuration list for PBXNativeTarget "MP4Player" */;
+			buildPhases = (
+				D2D88BDA09105323A2E06E4F /* [CP] Check Pods Manifest.lock */,
+				C63D515C1DBF532400269CC4 /* Sources */,
+				C63D515D1DBF532400269CC4 /* Frameworks */,
+				C63D515E1DBF532400269CC4 /* Resources */,
+				92F61D259CADBCAED4A7770D /* [CP] Embed Pods Frameworks */,
+				B93125F42184D379EA6EE720 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MP4Player;
+			productName = MP4Player;
+			productReference = C63D51601DBF532400269CC4 /* MP4Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C63D51581DBF532400269CC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Chentao;
+				TargetAttributes = {
+					C63D515F1DBF532400269CC4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = H6UN23L6E6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C63D515B1DBF532400269CC4 /* Build configuration list for PBXProject "MP4Player" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C63D51571DBF532400269CC4;
+			productRefGroup = C63D51611DBF532400269CC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C63D515F1DBF532400269CC4 /* MP4Player */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C63D515E1DBF532400269CC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C63D516A1DBF532400269CC4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92F61D259CADBCAED4A7770D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MP4Player/Pods-MP4Player-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B93125F42184D379EA6EE720 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MP4Player/Pods-MP4Player-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2D88BDA09105323A2E06E4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C63D515C1DBF532400269CC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D111591DC0857B00BAB6ED /* Box.m in Sources */,
+				C6D1114E1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m in Sources */,
+				C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */,
+				C6D111601DC0857B00BAB6ED /* NSTimer+Activate.m in Sources */,
+				C63D51651DBF532400269CC4 /* main.m in Sources */,
+				C6D111581DC0857B00BAB6ED /* CTableViewCell.m in Sources */,
+				C6D1115E1DC0857B00BAB6ED /* NSDate+Format.m in Sources */,
+				C6D111661DC087B200BAB6ED /* UILabel+Measure.m in Sources */,
+				C6D111521DC0857B00BAB6ED /* CButton.m in Sources */,
+				C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */,
+				C6D111551DC0857B00BAB6ED /* CAlertView.m in Sources */,
+				C6F80DA41DC0BB17002B3AD7 /* CFileBrowseDirectoryCell.m in Sources */,
+				C6D1116A1DC087FA00BAB6ED /* CBaseViewController.m in Sources */,
+				C6D111501DC0857B00BAB6ED /* JastorRuntimeHelper.m in Sources */,
+				C6D1115D1DC0857B00BAB6ED /* VBox.m in Sources */,
+				C6D111561DC0857B00BAB6ED /* CCycleScrollView.m in Sources */,
+				C6D111721DC0920300BAB6ED /* CFileBrowseViewController.m in Sources */,
+				C6D1115F1DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m in Sources */,
+				C6D1115C1DC0857B00BAB6ED /* UIView+LayoutElement.m in Sources */,
+				C6D111541DC0857B00BAB6ED /* IMRadioButton.m in Sources */,
+				C6D111531DC0857B00BAB6ED /* IMCheckBox.m in Sources */,
+				C6D1115B1DC0857B00BAB6ED /* HBox.m in Sources */,
+				C6D1116F1DC091E000BAB6ED /* CVideoPlayerViewController.m in Sources */,
+				C6D111511DC0857B00BAB6ED /* UIColor+Hex.m in Sources */,
+				C6D1114D1DC0857B00BAB6ED /* CEvent.m in Sources */,
+				C6F80DA11DC0A605002B3AD7 /* CFileBrowseView.m in Sources */,
+				C6D1114F1DC0857B00BAB6ED /* Jastor.m in Sources */,
+				C6D111571DC0857B00BAB6ED /* CTableView.m in Sources */,
+				C6D1115A1DC0857B00BAB6ED /* Group.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C63D516F1DBF532400269CC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C63D51701DBF532400269CC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C63D51721DBF532400269CC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F9B4D18A9F947FE7633A69C /* Pods-MP4Player.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = H6UN23L6E6;
+				GCC_PREFIX_HEADER = MP4Player/PrefixHeader.pch;
+				INFOPLIST_FILE = MP4Player/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chentao.mp4player;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C63D51731DBF532400269CC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE041AD362680E9A779A19CE /* Pods-MP4Player.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = H6UN23L6E6;
+				GCC_PREFIX_HEADER = MP4Player/PrefixHeader.pch;
+				INFOPLIST_FILE = MP4Player/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chentao.mp4player;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C63D515B1DBF532400269CC4 /* Build configuration list for PBXProject "MP4Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C63D516F1DBF532400269CC4 /* Debug */,
+				C63D51701DBF532400269CC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C63D51711DBF532400269CC4 /* Build configuration list for PBXNativeTarget "MP4Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C63D51721DBF532400269CC4 /* Debug */,
+				C63D51731DBF532400269CC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C63D51581DBF532400269CC4 /* Project object */;
+}
