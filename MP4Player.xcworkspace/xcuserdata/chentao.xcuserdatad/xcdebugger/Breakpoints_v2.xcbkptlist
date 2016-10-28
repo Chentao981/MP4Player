@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MP4Player/Source/VideoPlayer/CVideoPlayerViewController.m"
-            timestampString = "499334528.339421"
+            timestampString = "499344012.847036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "-saveVideoFileInfo:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MP4Player/Source/VideoPlayer/CVideoPlayerViewController.m"
-            timestampString = "499334185.753052"
+            timestampString = "499344012.847036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-videoPlayerAssetOnReady:"
             landmarkType = "7">
          </BreakpointContent>

@@ -25,6 +25,7 @@
     BOOL playState; // YES 播放 ; NO 暂停
     
     NSThread *saveVideoFileInfoThread;
+    NSTimer *saveVideoFileInfoTimer;
 }
 
 #pragma mark - ViewController Life
@@ -157,9 +158,6 @@
 }
 
 
-
-
-
 #pragma mark -CVideoPlayerDelegate
 - (void)videoPlayerWillLoadAsset:(CVideoPlayer *)videoPlayer {
     [videoPlayer showVideoLoading];
@@ -202,8 +200,31 @@
 
 - (void)videoPlayer:(CVideoPlayer *)videoPlayer changeCurrentTime:(Float64)currentTime duration:(Float64)duration {
     float progress = currentTime / duration;
-    DEBUG_LOG(@"VP视频播放进度progress:%f",progress);
+    //DEBUG_LOG(@"VP视频播放进度progress:%f",progress);
     self.videoFileInfo.progress=progress;
+    
+    [self startSaveVideoFileInfoTimer];
+}
+
+
+-(void)startSaveVideoFileInfoTimer{
+    if (saveVideoFileInfoTimer) {
+        [saveVideoFileInfoTimer invalidate];
+    }
+    saveVideoFileInfoTimer=[NSTimer scheduledTimerWithTimeInterval:0.3
+                                                            target:self
+                                                          selector:@selector(saveVideoFileInfoTimerHandler)
+                                                          userInfo:nil
+                                                           repeats:NO];
+}
+
+-(void)stopSaveVideoFileInfoTimer{
+    [saveVideoFileInfoTimer invalidate];
+    saveVideoFileInfoTimer = nil;
+}
+
+-(void)saveVideoFileInfoTimerHandler{
+    [self stopSaveVideoFileInfoTimer];
     
     if (saveVideoFileInfoThread) {
         [saveVideoFileInfoThread cancel];
@@ -221,6 +242,7 @@
 
 
 -(void)videoPlayerControllerBack{
+    [self stopSaveVideoFileInfoTimer];
     CEvent *event=[[CEvent alloc]initWithType:ViewController_ComeBack andData:self];
     [self dispatchEvent:event];
 }
@@ -230,6 +252,7 @@
 
 - (BOOL)saveVideoFileInfo:(CVideoFileInfo *)file {
     if (file) {
+        DEBUG_LOG(@"saveVideoFileInfo progress:%f",file.progress);
         NSString *archiverDirectory=[[HYFileManager cachesDir] stringByAppendingPathComponent:VideoFileInfoDirectory];
         if (![HYFileManager isExistsAtPath:archiverDirectory]) {
             [HYFileManager createDirectoryAtPath:archiverDirectory];

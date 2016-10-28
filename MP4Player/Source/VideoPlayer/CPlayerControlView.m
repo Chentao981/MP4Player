@@ -31,8 +31,6 @@
 
 @property (nonatomic, strong) Group *timeTipView;
 
-@property (nonatomic, strong) UIImageView *timeTipShadowView;
-
 @property (nonatomic, strong) UIImageView *timeTipIconView;
 
 @property (nonatomic, strong) UILabel *timeTipLabel;
@@ -100,45 +98,29 @@
 
         CGFloat tipViewWidth = 178;
         CGFloat tipViewHeight = 128;
-        CGFloat radius = 4.0;
+        CGFloat radius = 5.0;
 
         _timeTipView = [[Group alloc] init];
+        _timeTipView.backgroundColor=[ColorMake(0x000000) colorWithAlphaComponent:0.7];
         _timeTipView.layer.cornerRadius = 10.0;
         _timeTipView.layer.shadowColor =ColorMake(0x000000).CGColor;
         _timeTipView.layer.shadowOpacity = 0.2f;
         _timeTipView.layer.shadowOffset = CGSizeMake(0, 2);
 
-        //        _timeTipView.backgroundColor = CColor(0xFFFFFF);
         _timeTipView.layout_height = tipViewHeight;
         _timeTipView.layout_width = tipViewWidth;
         _timeTipView.layer.cornerRadius = radius;
-        _timeTipView.clipsToBounds = NO;
+        _timeTipView.clipsToBounds = YES;
         _timeTipView.includeInLayout = YES;
         _timeTipView.layout_verticalCenter = [NSNumber numberWithFloat:0.0];
         _timeTipView.layout_horizontalCenter = [NSNumber numberWithFloat:0.0];
 
-        [_timeTipView addSubview:self.timeTipShadowView];
         [_timeTipView addSubview:self.timeTipIconView];
         [_timeTipView addSubview:self.timeTipLabel];
     }
     return _timeTipView;
 }
 
-- (UIImageView *)timeTipShadowView {
-    if (!_timeTipShadowView) {
-        UIImage *shadowImage = [UIImage imageNamed:@"videoplayer_tiptimebg_shadow"];
-        shadowImage = [shadowImage stretchableImageWithLeftCapWidth:19 topCapHeight:19];
-
-        _timeTipShadowView = [[UIImageView alloc] initWithImage:shadowImage];
-
-        _timeTipShadowView.includeInLayout = YES;
-        _timeTipShadowView.layout_top = [NSNumber numberWithFloat:-8.0];
-        _timeTipShadowView.layout_bottom = [NSNumber numberWithFloat:-8.0];
-        _timeTipShadowView.layout_left = [NSNumber numberWithFloat:-8.0];
-        _timeTipShadowView.layout_right = [NSNumber numberWithFloat:-8.0];
-    }
-    return _timeTipShadowView;
-}
 
 - (UIImageView *)timeTipIconView {
     if (!_timeTipIconView) {
@@ -159,7 +141,7 @@
         _timeTipLabel = [[UILabel alloc] init];
         _timeTipLabel.layout_height = 25;
         _timeTipLabel.textAlignment = NSTextAlignmentCenter;
-        _timeTipLabel.textColor = ColorMake(0x000000);
+        _timeTipLabel.textColor = ColorMake(0xFFFFFF);
         _timeTipLabel.font = FontMake(14);
         _timeTipLabel.includeInLayout = YES;
         _timeTipLabel.layout_left = [NSNumber numberWithFloat:5.0];
