@@ -23,5 +23,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "JGProgressHUD.h"
 #import "CHUDManagement.h"
+#import "Group.h"
+#import "HBox.h"
+#import "VBox.h"
 
 #endif /* PrefixHeader_pch */

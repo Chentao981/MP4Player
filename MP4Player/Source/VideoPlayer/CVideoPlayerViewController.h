@@ -7,7 +7,10 @@
 //
 
 #import "CBaseViewController.h"
+#import "CFile.h"
 
 @interface CVideoPlayerViewController : CBaseViewController
+
+@property(nonatomic,strong)CFile *videoFile;
 
 @end

@@ -10,6 +10,11 @@
 		3585B2AD1891E4F5ADA4D02E /* libPods-MP4Player.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B65F0BDDC0BFBF31C43C1EA9 /* libPods-MP4Player.a */; };
 		C63D51651DBF532400269CC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C63D51641DBF532400269CC4 /* main.m */; };
 		C63D516A1DBF532400269CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C63D51691DBF532400269CC4 /* Assets.xcassets */; };
+		C64418B61DC2FAA900339684 /* CPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418AD1DC2FAA900339684 /* CPlayerControlView.m */; };
+		C64418B71DC2FAA900339684 /* CVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418AF1DC2FAA900339684 /* CVideoPlayer.m */; };
+		C64418B81DC2FAA900339684 /* CVideoPlayerSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418B11DC2FAA900339684 /* CVideoPlayerSliderView.m */; };
+		C64418B91DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418B31DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m */; };
+		C64418BA1DC2FAA900339684 /* CVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418B51DC2FAA900339684 /* CVideoPlayerViewController.m */; };
 		C6D1114D1DC0857B00BAB6ED /* CEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111A1DC0857B00BAB6ED /* CEvent.m */; };
 		C6D1114E1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111C1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m */; };
 		C6D1114F1DC0857B00BAB6ED /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111F1DC0857B00BAB6ED /* Jastor.m */; };
@@ -18,7 +23,6 @@
 		C6D111521DC0857B00BAB6ED /* CButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111281DC0857B00BAB6ED /* CButton.m */; };
 		C6D111531DC0857B00BAB6ED /* IMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1112A1DC0857B00BAB6ED /* IMCheckBox.m */; };
 		C6D111541DC0857B00BAB6ED /* IMRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1112C1DC0857B00BAB6ED /* IMRadioButton.m */; };
-		C6D111551DC0857B00BAB6ED /* CAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1112F1DC0857B00BAB6ED /* CAlertView.m */; };
 		C6D111561DC0857B00BAB6ED /* CCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111321DC0857B00BAB6ED /* CCycleScrollView.m */; };
 		C6D111571DC0857B00BAB6ED /* CTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111351DC0857B00BAB6ED /* CTableView.m */; };
 		C6D111581DC0857B00BAB6ED /* CTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111371DC0857B00BAB6ED /* CTableViewCell.m */; };
@@ -32,7 +36,6 @@
 		C6D111601DC0857B00BAB6ED /* NSTimer+Activate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111491DC0857B00BAB6ED /* NSTimer+Activate.m */; };
 		C6D111661DC087B200BAB6ED /* UILabel+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111651DC087B200BAB6ED /* UILabel+Measure.m */; };
 		C6D1116A1DC087FA00BAB6ED /* CBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111691DC087FA00BAB6ED /* CBaseViewController.m */; };
-		C6D1116F1DC091E000BAB6ED /* CVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */; };
 		C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111741DC0928400BAB6ED /* AppDelegate.m */; };
 		C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111771DC093C500BAB6ED /* CRootNavigationController.m */; };
 		C6F80DAE1DC1D705002B3AD7 /* CFileBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DA71DC1D705002B3AD7 /* CFileBrowseViewController.m */; };
@@ -53,6 +56,16 @@
 		C63D51641DBF532400269CC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C63D51691DBF532400269CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C63D516E1DBF532400269CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64418AC1DC2FAA900339684 /* CPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPlayerControlView.h; sourceTree = "<group>"; };
+		C64418AD1DC2FAA900339684 /* CPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPlayerControlView.m; sourceTree = "<group>"; };
+		C64418AE1DC2FAA900339684 /* CVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayer.h; sourceTree = "<group>"; };
+		C64418AF1DC2FAA900339684 /* CVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayer.m; sourceTree = "<group>"; };
+		C64418B01DC2FAA900339684 /* CVideoPlayerSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayerSliderView.h; sourceTree = "<group>"; };
+		C64418B11DC2FAA900339684 /* CVideoPlayerSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerSliderView.m; sourceTree = "<group>"; };
+		C64418B21DC2FAA900339684 /* CVideoPlayerSpeedMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayerSpeedMenuView.h; sourceTree = "<group>"; };
+		C64418B31DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerSpeedMenuView.m; sourceTree = "<group>"; };
+		C64418B41DC2FAA900339684 /* CVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayerViewController.h; sourceTree = "<group>"; };
+		C64418B51DC2FAA900339684 /* CVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerViewController.m; sourceTree = "<group>"; };
 		C6D111191DC0857B00BAB6ED /* CEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEvent.h; sourceTree = "<group>"; };
 		C6D1111A1DC0857B00BAB6ED /* CEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEvent.m; sourceTree = "<group>"; };
 		C6D1111B1DC0857B00BAB6ED /* NSObject+CEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CEventDispatcher.h"; sourceTree = "<group>"; };
@@ -69,8 +82,6 @@
 		C6D1112A1DC0857B00BAB6ED /* IMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMCheckBox.m; sourceTree = "<group>"; };
 		C6D1112B1DC0857B00BAB6ED /* IMRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMRadioButton.h; sourceTree = "<group>"; };
 		C6D1112C1DC0857B00BAB6ED /* IMRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMRadioButton.m; sourceTree = "<group>"; };
-		C6D1112E1DC0857B00BAB6ED /* CAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAlertView.h; sourceTree = "<group>"; };
-		C6D1112F1DC0857B00BAB6ED /* CAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAlertView.m; sourceTree = "<group>"; };
 		C6D111311DC0857B00BAB6ED /* CCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCycleScrollView.h; sourceTree = "<group>"; };
 		C6D111321DC0857B00BAB6ED /* CCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCycleScrollView.m; sourceTree = "<group>"; };
 		C6D111341DC0857B00BAB6ED /* CTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTableView.h; sourceTree = "<group>"; };
@@ -98,8 +109,6 @@
 		C6D111651DC087B200BAB6ED /* UILabel+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Measure.m"; sourceTree = "<group>"; };
 		C6D111681DC087FA00BAB6ED /* CBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBaseViewController.h; sourceTree = "<group>"; };
 		C6D111691DC087FA00BAB6ED /* CBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBaseViewController.m; sourceTree = "<group>"; };
-		C6D1116D1DC091E000BAB6ED /* CVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayerViewController.h; sourceTree = "<group>"; };
-		C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerViewController.m; sourceTree = "<group>"; };
 		C6D111731DC0928400BAB6ED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6D111741DC0928400BAB6ED /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C6D111761DC093C500BAB6ED /* CRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRootNavigationController.h; sourceTree = "<group>"; };
@@ -267,7 +276,6 @@
 				C6F80DC41DC20D12002B3AD7 /* HUDManagement */,
 				C6D111631DC087B200BAB6ED /* Label */,
 				C6D111261DC0857B00BAB6ED /* Button */,
-				C6D1112D1DC0857B00BAB6ED /* CAlertView */,
 				C6D111301DC0857B00BAB6ED /* CCycleScrollView */,
 				C6D111331DC0857B00BAB6ED /* CTableView */,
 				C6D111381DC0857B00BAB6ED /* UILayout */,
@@ -286,15 +294,6 @@
 				C6D1112C1DC0857B00BAB6ED /* IMRadioButton.m */,
 			);
 			path = Button;
-			sourceTree = "<group>";
-		};
-		C6D1112D1DC0857B00BAB6ED /* CAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				C6D1112E1DC0857B00BAB6ED /* CAlertView.h */,
-				C6D1112F1DC0857B00BAB6ED /* CAlertView.m */,
-			);
-			path = CAlertView;
 			sourceTree = "<group>";
 		};
 		C6D111301DC0857B00BAB6ED /* CCycleScrollView */ = {
@@ -368,8 +367,16 @@
 		C6D1116B1DC08E4000BAB6ED /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				C6D1116D1DC091E000BAB6ED /* CVideoPlayerViewController.h */,
-				C6D1116E1DC091E000BAB6ED /* CVideoPlayerViewController.m */,
+				C64418AC1DC2FAA900339684 /* CPlayerControlView.h */,
+				C64418AD1DC2FAA900339684 /* CPlayerControlView.m */,
+				C64418AE1DC2FAA900339684 /* CVideoPlayer.h */,
+				C64418AF1DC2FAA900339684 /* CVideoPlayer.m */,
+				C64418B01DC2FAA900339684 /* CVideoPlayerSliderView.h */,
+				C64418B11DC2FAA900339684 /* CVideoPlayerSliderView.m */,
+				C64418B21DC2FAA900339684 /* CVideoPlayerSpeedMenuView.h */,
+				C64418B31DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m */,
+				C64418B41DC2FAA900339684 /* CVideoPlayerViewController.h */,
+				C64418B51DC2FAA900339684 /* CVideoPlayerViewController.m */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -576,10 +583,12 @@
 				C6F80DD21DC20D12002B3AD7 /* CPromptHUDIndicatorView.m in Sources */,
 				C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */,
 				C6F80DD01DC20D12002B3AD7 /* CHUDManagement.m in Sources */,
-				C6D111551DC0857B00BAB6ED /* CAlertView.m in Sources */,
 				C6D1116A1DC087FA00BAB6ED /* CBaseViewController.m in Sources */,
 				C6D111501DC0857B00BAB6ED /* JastorRuntimeHelper.m in Sources */,
+				C64418B71DC2FAA900339684 /* CVideoPlayer.m in Sources */,
 				C6D1115D1DC0857B00BAB6ED /* VBox.m in Sources */,
+				C64418B81DC2FAA900339684 /* CVideoPlayerSliderView.m in Sources */,
+				C64418B91DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m in Sources */,
 				C6F80DAE1DC1D705002B3AD7 /* CFileBrowseViewController.m in Sources */,
 				C6D111561DC0857B00BAB6ED /* CCycleScrollView.m in Sources */,
 				C6D1115F1DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m in Sources */,
@@ -587,12 +596,13 @@
 				C6D111541DC0857B00BAB6ED /* IMRadioButton.m in Sources */,
 				C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m in Sources */,
 				C6D111531DC0857B00BAB6ED /* IMCheckBox.m in Sources */,
+				C64418BA1DC2FAA900339684 /* CVideoPlayerViewController.m in Sources */,
 				C6D1115B1DC0857B00BAB6ED /* HBox.m in Sources */,
-				C6D1116F1DC091E000BAB6ED /* CVideoPlayerViewController.m in Sources */,
 				C6D111511DC0857B00BAB6ED /* UIColor+Hex.m in Sources */,
 				C6F80DB01DC1D705002B3AD7 /* CFileBrowseView.m in Sources */,
 				C6D1114D1DC0857B00BAB6ED /* CEvent.m in Sources */,
 				C6D1114F1DC0857B00BAB6ED /* Jastor.m in Sources */,
+				C64418B61DC2FAA900339684 /* CPlayerControlView.m in Sources */,
 				C6D111571DC0857B00BAB6ED /* CTableView.m in Sources */,
 				C6D1115A1DC0857B00BAB6ED /* Group.m in Sources */,
 			);

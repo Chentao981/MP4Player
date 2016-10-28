@@ -9,7 +9,7 @@
 #import "CFileBrowseViewController.h"
 #import "CFileBrowseView.h"
 #import "CFileBrowseViewFileCell.h"
-
+#import "CVideoPlayerViewController.h"
 
 @interface CFileBrowseViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -89,7 +89,7 @@
         if (isDirectory) {
             file.image=ImageMake(@"folder_normal");
             [self.dataSource addObject:file];
-        }else if([[fileName uppercaseString] hasSuffix:@".MP4"]){
+        }else if([[fileName uppercaseString] hasSuffix:Extension_MP4]){
             file.image=[self createKeyFrame:fullPath];
             [self.dataSource addObject:file];
         }else{
@@ -98,15 +98,15 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:YES animated:NO];
+//}
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
-}
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO animated:NO];
+//}
 
 -(void)fileBrowseViewBackButtonTouchHandler:(CEvent *)event{
     CEvent *backEvent = [[CEvent alloc] initWithType:ViewController_ComeBack andData:nil];
@@ -171,6 +171,15 @@
                                           target:self
                                           action:@selector(viewControllerComeBackHandler:)];
         [self.navigationController pushViewController:fileController animated:YES];
+    }
+    
+    if([[file.fileName uppercaseString] hasSuffix:Extension_MP4]){
+        CVideoPlayerViewController *videoPlayerViewController=[[CVideoPlayerViewController alloc]init];
+        [videoPlayerViewController addEventListenerWithType:ViewController_ComeBack
+                                                     target:self
+                                                     action:@selector(viewControllerComeBackHandler:)];
+        videoPlayerViewController.videoFile=file;
+        [self.navigationController pushViewController:videoPlayerViewController animated:YES];
     }
 }
 

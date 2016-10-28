@@ -25,8 +25,75 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self systemNotificationListener];
+    
     return YES;
 }
+
+-(void)systemNotificationListener{
+    //静音模式继续播放
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    
+    NSError *categorySetError = noErr;
+    [audioSession setCategory: AVAudioSessionCategoryPlayback error: &categorySetError];
+    if (categorySetError) {
+        DEBUG_LOG(@"AVAudioSession设置类型失败：%@",categorySetError);
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(audioSessionInterruptionHandler:)
+                                                 name:AVAudioSessionInterruptionNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(audioSessionRouteChangeHandler:)
+                                                 name:AVAudioSessionRouteChangeNotification
+                                               object:nil];
+    
+}
+
+
+-(void)audioSessionInterruptionHandler:(NSNotification*)notification{
+    NSDictionary *interruptionDictionary = [notification userInfo];
+    AVAudioSessionInterruptionType type =[interruptionDictionary [AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    if (type == AVAudioSessionInterruptionTypeBegan) {
+        DEBUG_LOG(@"声音打断开始");
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCNotificationApplicationAudioSessionBeginInterruption object:nil];
+    } else if (type == AVAudioSessionInterruptionTypeEnded){
+        DEBUG_LOG(@"声音打断结束");
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCNotificationApplicationAudioSessionEndInterruption object:nil];
+    } else {
+        DEBUG_LOG(@"AVAudioSessionInterruptionNotification 其它情况");
+    }
+}
+
+-(void)audioSessionRouteChangeHandler:(NSNotification*)notification{
+    NSDictionary *dic = notification.userInfo;
+    int changeReason = [dic[AVAudioSessionRouteChangeReasonKey] intValue];
+    //等于AVAudioSessionRouteChangeReasonOldDeviceUnavailable表示旧输出不可用
+    if (changeReason == AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
+        AVAudioSessionRouteDescription *routeDescription = dic[AVAudioSessionRouteChangePreviousRouteKey];
+        AVAudioSessionPortDescription *portDescription = [routeDescription.outputs firstObject];
+        //原设备为耳机则暂停
+        if ([AVAudioSessionPortHeadphones isEqualToString:portDescription.portType] ||
+            [AVAudioSessionPortBluetoothA2DP isEqualToString:portDescription.portType]
+            ) {
+            DEBUG_LOG(@"拔出耳机  %@ ", portDescription.portType);
+            [[NSNotificationCenter defaultCenter] postNotificationName:kCNotificationApplicationHeadphonePullout object:nil];
+        }
+    }
+    
+    if (changeReason == AVAudioSessionRouteChangeReasonNewDeviceAvailable) {
+        AVAudioSessionRouteDescription *routeDescription = dic[AVAudioSessionRouteChangePreviousRouteKey];
+        AVAudioSessionPortDescription *portDescription = [routeDescription.outputs firstObject];
+        if ([AVAudioSessionPortBuiltInSpeaker isEqualToString:portDescription.portType]) {
+            DEBUG_LOG(@"插入耳机  %@ ", portDescription.portType);
+            [[NSNotificationCenter defaultCenter] postNotificationName:kCNotificationApplicationHeadphoneInsert object:nil];
+        }
+    }
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

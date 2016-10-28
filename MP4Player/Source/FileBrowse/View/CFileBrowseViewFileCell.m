@@ -30,8 +30,8 @@
 //    [self.contentView addSubview:scrollContentView];
     
     iconView=[[UIImageView alloc]init];
-    iconView.layer.borderColor=GapLineColor.CGColor;
-    iconView.layer.borderWidth=0.5;
+//    iconView.layer.borderColor=GapLineColor.CGColor;
+//    iconView.layer.borderWidth=0.5;
     iconView.clipsToBounds=YES;
     iconView.contentMode=UIViewContentModeScaleAspectFill;
     [self.contentView addSubview:iconView];

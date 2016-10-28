@@ -36,4 +36,24 @@
 // AppShortVersion
 #define AppShortVersion [NSString stringWithFormat:@"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]
 
+
+
+// Extension
+#define Extension_MP4 @".MP4"
+
+//语音开始被打断
+#define kCNotificationApplicationAudioSessionBeginInterruption    @"ApplicationAudioSessionBeginInterruption"
+
+//语音打断结束
+#define kCNotificationApplicationAudioSessionEndInterruption    @"ApplicationAudioSessionEndInterruption"
+
+
+#pragma mark - 耳机
+//耳机插入
+#define kCNotificationApplicationHeadphoneInsert @"ApplicationHeadphoneInsert"
+
+//耳机拔出
+#define kCNotificationApplicationHeadphonePullout @"ApplicationHeadphonePullout"
+
+
 #endif /* UtilityMacro_h */
