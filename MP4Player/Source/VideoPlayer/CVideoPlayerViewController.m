@@ -8,16 +8,23 @@
 
 #import "CVideoPlayerViewController.h"
 #import "CVideoPlayer.h"
+#import "CVideoFileInfo.h"
+
+#define VideoFileInfoDirectory @"videoinfo"
 
 @interface CVideoPlayerViewController ()<CVideoPlayerDelegate>
 
 @property(nonatomic,strong)CVideoPlayer *videoPlayer;
+
+@property(nonatomic,strong)CVideoFileInfo *videoFileInfo;
 
 @end
 
 @implementation CVideoPlayerViewController {
     BOOL firstLoad;
     BOOL playState; // YES 播放 ; NO 暂停
+    
+    NSThread *saveVideoFileInfoThread;
 }
 
 #pragma mark - ViewController Life
@@ -53,6 +60,15 @@
 
 - (void)setTitle:(NSString *)title {
     self.videoPlayer.title = title;
+}
+
+-(void)setVideoFile:(CFile *)videoFile{
+    _videoFile=videoFile;
+    
+    self.videoFileInfo=[[CVideoFileInfo alloc]init];
+    self.videoFileInfo.filePath=_videoFile.filePath;
+    self.videoFileInfo.fileName=_videoFile.fileName;
+    self.videoFileInfo.videoInfoFileName=[_videoFile.filePath getMD5];
 }
 
 
@@ -141,13 +157,32 @@
 }
 
 
+
+
+
 #pragma mark -CVideoPlayerDelegate
 - (void)videoPlayerWillLoadAsset:(CVideoPlayer *)videoPlayer {
     [videoPlayer showVideoLoading];
 }
 
 - (void)videoPlayerAssetOnReady:(CVideoPlayer *)videoPlayer {
-    float progress = 0;
+    self.videoFileInfo.duration=CMTimeGetSeconds(videoPlayer.playerItemDurationTime);
+    
+    CVideoFileInfo *videoInfo;
+    
+    id archiveInfo= [self getVideoFileInfo:self.videoFileInfo];
+    
+    if ([archiveInfo isMemberOfClass:[CVideoFileInfo class]]) {
+        videoInfo=archiveInfo;
+    }else{
+        videoInfo=nil;
+    }
+    
+    self.videoFileInfo.progress=videoInfo.progress;
+    float progress =self.videoFileInfo.progress;
+    if (isnan(progress) || progress>1.0) {
+        progress = 0;
+    }
     [videoPlayer loadToProgress:progress];
 }
 
@@ -167,9 +202,18 @@
 
 - (void)videoPlayer:(CVideoPlayer *)videoPlayer changeCurrentTime:(Float64)currentTime duration:(Float64)duration {
     float progress = currentTime / duration;
-    //DEBUG_LOG(@"VP视频播放进度progress:%f",progress);
-    //[KCUserDefaultsManager saveLastPlayProgress:progress withClassID:kcLocalClassID(self.lesson.classId, self.lesson.lessonId)];
+    DEBUG_LOG(@"VP视频播放进度progress:%f",progress);
+    self.videoFileInfo.progress=progress;
+    
+    if (saveVideoFileInfoThread) {
+        [saveVideoFileInfoThread cancel];
+    }
+    saveVideoFileInfoThread=[[NSThread alloc]initWithTarget:self
+                                                   selector:@selector(saveVideoFileInfo:)
+                                                     object:self.videoFileInfo];
+    [saveVideoFileInfoThread start];
 }
+
 
 - (void)videoPlayerOnBack:(CVideoPlayer *)videoPlayer {
     [self videoPlayerControllerBack];
@@ -179,6 +223,40 @@
 -(void)videoPlayerControllerBack{
     CEvent *event=[[CEvent alloc]initWithType:ViewController_ComeBack andData:self];
     [self dispatchEvent:event];
+}
+
+
+#pragma mark- Save Video File Info
+
+- (BOOL)saveVideoFileInfo:(CVideoFileInfo *)file {
+    if (file) {
+        NSString *archiverDirectory=[[HYFileManager cachesDir] stringByAppendingPathComponent:VideoFileInfoDirectory];
+        if (![HYFileManager isExistsAtPath:archiverDirectory]) {
+            [HYFileManager createDirectoryAtPath:archiverDirectory];
+        }
+        NSString *archiverName=file.videoInfoFileName;
+        NSString *archiverPath=[archiverDirectory stringByAppendingPathComponent:archiverName];
+        BOOL success = [NSKeyedArchiver archiveRootObject:file toFile:archiverPath];
+        return success;
+    } else {
+        return NO;
+    }
+}
+
+- (CVideoFileInfo *)getVideoFileInfo:(CVideoFileInfo *)file {
+    NSString *archiverDirectory=[[HYFileManager cachesDir] stringByAppendingPathComponent:VideoFileInfoDirectory];
+    NSString *archiverName=file.videoInfoFileName;
+    NSString *archiverPath=[archiverDirectory stringByAppendingPathComponent:archiverName];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:archiverPath];
+}
+
+- (void)dealloc {
+    DEBUG_LOG(@"dealloc");
+    if (saveVideoFileInfoThread) {
+        [saveVideoFileInfoThread cancel];
+        saveVideoFileInfoThread = nil;
+    }
+    [self removeNotification];
 }
 
 @end

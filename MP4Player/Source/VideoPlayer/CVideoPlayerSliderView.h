@@ -15,24 +15,24 @@
 /**
  *  开始拖拽
  *
- *  @param sliderView
- *  @param value
+ *  @param sliderView sliderView
+ *  @param value value
  */
 -(void)sliderView:(CVideoPlayerSliderView *)sliderView startDragValue:(float)value;
 
 /**
  *  拖拽中
  *
- *  @param sliderView
- *  @param value
+ *  @param sliderView sliderView
+ *  @param value value
  */
 -(void)sliderView:(CVideoPlayerSliderView *)sliderView moveDragValue:(float)value;
 
 /**
  *  拖拽结束
  *
- *  @param sliderView
- *  @param value
+ *  @param sliderView sliderView
+ *  @param value value
  */
 -(void)sliderView:(CVideoPlayerSliderView *)sliderView endDragValue:(float)value;
 

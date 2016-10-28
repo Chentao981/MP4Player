@@ -8,7 +8,8 @@
 
 #import "CFileBrowseViewController.h"
 #import "CFileBrowseView.h"
-#import "CFileBrowseViewFileCell.h"
+#import "CFileBrowseViewDirectoryCell.h"
+#import "CFileBrowseViewVideoFileCell.h"
 #import "CVideoPlayerViewController.h"
 
 @interface CFileBrowseViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -38,8 +39,12 @@
     _fileBrowseView=[[CFileBrowseView alloc]init];
     [_fileBrowseView addEventListenerWithType:FileBrowseView_BackButton_Touch target:self action:@selector(fileBrowseViewBackButtonTouchHandler:)];
     
-    [_fileBrowseView.fileListView registerClass:[CFileBrowseViewFileCell class]
-                         forCellReuseIdentifier:FileBrowseViewFileCell_Identifier];
+    [_fileBrowseView.fileListView registerClass:[CFileBrowseViewDirectoryCell class]
+                         forCellReuseIdentifier:FileBrowseViewDirectoryCell_Identifier];
+    
+    [_fileBrowseView.fileListView registerClass:[CFileBrowseViewVideoFileCell class]
+                         forCellReuseIdentifier:FileBrowseViewVideoFileCell_Identifier];
+    
     _fileBrowseView.fileListView.delegate=self;
     _fileBrowseView.fileListView.dataSource=self;
     self.view=_fileBrowseView;
@@ -85,12 +90,21 @@
         file.filePath=fullPath;
         file.fileName=fileName;
         file.isDirectory=isDirectory;
-
+        
         if (isDirectory) {
             file.image=ImageMake(@"folder_normal");
             [self.dataSource addObject:file];
         }else if([[fileName uppercaseString] hasSuffix:Extension_MP4]){
-            file.image=[self createKeyFrame:fullPath];
+            
+            NSURL *videoURL = [NSURL fileURLWithPath:fullPath];
+            NSDictionary *options = @{ AVURLAssetPreferPreciseDurationAndTimingKey:@YES };
+            AVURLAsset *videoAsset = [[AVURLAsset alloc]initWithURL:videoURL options:options];
+            
+            CMTime duration = videoAsset.duration;
+            Float64 durationSeconds = CMTimeGetSeconds(duration);
+            file.duration=durationSeconds;
+            file.durationText=[NSString timeIntervalFormat:durationSeconds];
+            file.image=[self createKeyFrame:videoAsset];
             [self.dataSource addObject:file];
         }else{
             continue;
@@ -117,10 +131,9 @@
     self.fileBrowseView.title=title;
 }
 
--(UIImage *)createKeyFrame:(NSString *)videoPath{
-    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
-    NSDictionary *options = @{ AVURLAssetPreferPreciseDurationAndTimingKey:@YES };
-    AVURLAsset *videoAsset = [[AVURLAsset alloc]initWithURL:videoURL options:options];
+
+
+-(UIImage *)createKeyFrame:(AVURLAsset *)videoAsset{
     AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:videoAsset];
     
     Float64 durationSeconds = CMTimeGetSeconds([videoAsset duration]);
@@ -142,8 +155,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CFile *file=[self.dataSource objectAtIndex:indexPath.row];
+    CTableViewCell *cell;
+    if (file.isDirectory) {
+        cell=[tableView dequeueReusableCellWithIdentifier:FileBrowseViewDirectoryCell_Identifier];
+    }else{
+        cell=[tableView dequeueReusableCellWithIdentifier:FileBrowseViewVideoFileCell_Identifier];
+    }
     
-    CTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:FileBrowseViewFileCell_Identifier];
     cell.data=file;
     cell.showBottomLine=YES;
     cell.bottomLineLeftPadding=0;

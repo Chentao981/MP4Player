@@ -18,63 +18,63 @@
 /**
  *  播放器资源将要开始加载资源
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerWillLoadAsset:(CVideoPlayer *)videoPlayer;
 
 /**
  *  播放器资源已准备好
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerAssetOnReady:(CVideoPlayer *)videoPlayer;
 
 /**
  *  播放器播放资源完成
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerDidPlayToEndTime:(CVideoPlayer *)videoPlayer;
 
 /**
  *  播放器加载资源失败
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayer:(CVideoPlayer *)videoPlayer loadAssetFailed:(NSError *)error;
 
 /**
  *  播放进度发生变化
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayer:(CVideoPlayer *)videoPlayer changeCurrentTime:(Float64)currentTime duration:(Float64)duration;
 
 /**
  *  播放器加载资源失败
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerOnBack:(CVideoPlayer *)videoPlayer;
 
 /**
  *  加载到指定进度时可能会需要一些时间，在完成时调用此回调
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerLoadToProgressCompletion:(CVideoPlayer *)videoPlayer;
 
 /**
  *  将要调用play方法
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerWillCallPlay:(CVideoPlayer *)videoPlayer;
 
 /**
  *  将要play方法完成
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerDidCallPlay:(CVideoPlayer *)videoPlayer;
 
@@ -83,14 +83,14 @@
 /**
  *  将要调用pause方法
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerWillCallPause:(CVideoPlayer *)videoPlayer;
 
 /**
  *  将要pause方法完成
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  */
 - (void)videoPlayerDidCallPause:(CVideoPlayer *)videoPlayer;
 
@@ -100,7 +100,7 @@
 /**
  *  开始拖拽播放头
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  *  @param progress    拖拽播放头时的播放进度
  */
 - (void)videoPlayer:(CVideoPlayer *)videoPlayer beginDragProgress:(float)progress;
@@ -108,7 +108,7 @@
 /**
  *  播放头拖拽中
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  *  @param progress    拖拽播放头时的播放进度
  */
 - (void)videoPlayer:(CVideoPlayer *)videoPlayer moveDragProgress:(float)progress;
@@ -116,7 +116,7 @@
 /**
  *  停止拖拽播放头
  *
- *  @param videoPlayer
+ *  @param videoPlayer videoPlayer
  *  @param progress    拖拽播放头时的播放进度
  */
 - (void)videoPlayer:(CVideoPlayer *)videoPlayer endDragProgress:(float)progress;
@@ -191,21 +191,21 @@
 /**
  *  跳到指定的时间点
  *
- *  @param time
+ *  @param time time
  */
 - (void)seekToTime:(NSTimeInterval)time;
 
 /**
  *  跳到指定的进度 ，百分比
  *
- *  @param time
+ *  @param progress progress
  */
 - (void)seekToProgress:(float)progress;
 
 /**
  *  加载视频到指定的进度
  *
- *  @param progress
+ *  @param progress progress
  */
 - (void)loadToProgress:(float)progress;
 

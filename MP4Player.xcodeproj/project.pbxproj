@@ -15,6 +15,9 @@
 		C64418B81DC2FAA900339684 /* CVideoPlayerSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418B11DC2FAA900339684 /* CVideoPlayerSliderView.m */; };
 		C64418B91DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418B31DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m */; };
 		C64418BA1DC2FAA900339684 /* CVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64418B51DC2FAA900339684 /* CVideoPlayerViewController.m */; };
+		C6B30E0D1DC3185A0053ED17 /* CFileBrowseViewVideoFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B30E0C1DC3185A0053ED17 /* CFileBrowseViewVideoFileCell.m */; };
+		C6B30E101DC31E0F0053ED17 /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B30E0F1DC31E0F0053ED17 /* NSString+Utility.m */; };
+		C6B30E131DC338870053ED17 /* CVideoFileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B30E121DC338870053ED17 /* CVideoFileInfo.m */; };
 		C6D1114D1DC0857B00BAB6ED /* CEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111A1DC0857B00BAB6ED /* CEvent.m */; };
 		C6D1114E1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111C1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m */; };
 		C6D1114F1DC0857B00BAB6ED /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1111F1DC0857B00BAB6ED /* Jastor.m */; };
@@ -39,7 +42,7 @@
 		C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111741DC0928400BAB6ED /* AppDelegate.m */; };
 		C6D111781DC093C500BAB6ED /* CRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D111771DC093C500BAB6ED /* CRootNavigationController.m */; };
 		C6F80DAE1DC1D705002B3AD7 /* CFileBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DA71DC1D705002B3AD7 /* CFileBrowseViewController.m */; };
-		C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m */; };
+		C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewDirectoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewDirectoryCell.m */; };
 		C6F80DB01DC1D705002B3AD7 /* CFileBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */; };
 		C6F80DB31DC1D722002B3AD7 /* CFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DB21DC1D722002B3AD7 /* CFile.m */; };
 		C6F80DCF1DC20D12002B3AD7 /* CHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F80DC61DC20D12002B3AD7 /* CHUD.m */; };
@@ -66,6 +69,12 @@
 		C64418B31DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerSpeedMenuView.m; sourceTree = "<group>"; };
 		C64418B41DC2FAA900339684 /* CVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoPlayerViewController.h; sourceTree = "<group>"; };
 		C64418B51DC2FAA900339684 /* CVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoPlayerViewController.m; sourceTree = "<group>"; };
+		C6B30E0B1DC3185A0053ED17 /* CFileBrowseViewVideoFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewVideoFileCell.h; sourceTree = "<group>"; };
+		C6B30E0C1DC3185A0053ED17 /* CFileBrowseViewVideoFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewVideoFileCell.m; sourceTree = "<group>"; };
+		C6B30E0E1DC31E0F0053ED17 /* NSString+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utility.h"; sourceTree = "<group>"; };
+		C6B30E0F1DC31E0F0053ED17 /* NSString+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utility.m"; sourceTree = "<group>"; };
+		C6B30E111DC338870053ED17 /* CVideoFileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVideoFileInfo.h; sourceTree = "<group>"; };
+		C6B30E121DC338870053ED17 /* CVideoFileInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVideoFileInfo.m; sourceTree = "<group>"; };
 		C6D111191DC0857B00BAB6ED /* CEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEvent.h; sourceTree = "<group>"; };
 		C6D1111A1DC0857B00BAB6ED /* CEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEvent.m; sourceTree = "<group>"; };
 		C6D1111B1DC0857B00BAB6ED /* NSObject+CEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CEventDispatcher.h"; sourceTree = "<group>"; };
@@ -117,8 +126,8 @@
 		C6F80D9E1DC09945002B3AD7 /* UtilityMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityMacro.h; sourceTree = "<group>"; };
 		C6F80DA61DC1D705002B3AD7 /* CFileBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewController.h; sourceTree = "<group>"; };
 		C6F80DA71DC1D705002B3AD7 /* CFileBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewController.m; sourceTree = "<group>"; };
-		C6F80DAA1DC1D705002B3AD7 /* CFileBrowseViewFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewFileCell.h; sourceTree = "<group>"; };
-		C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewFileCell.m; sourceTree = "<group>"; };
+		C6F80DAA1DC1D705002B3AD7 /* CFileBrowseViewDirectoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseViewDirectoryCell.h; sourceTree = "<group>"; };
+		C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewDirectoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseViewDirectoryCell.m; sourceTree = "<group>"; };
 		C6F80DAC1DC1D705002B3AD7 /* CFileBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileBrowseView.h; sourceTree = "<group>"; };
 		C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileBrowseView.m; sourceTree = "<group>"; };
 		C6F80DB11DC1D722002B3AD7 /* CFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFile.h; sourceTree = "<group>"; };
@@ -342,6 +351,8 @@
 				C6D111471DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m */,
 				C6D111481DC0857B00BAB6ED /* NSTimer+Activate.h */,
 				C6D111491DC0857B00BAB6ED /* NSTimer+Activate.m */,
+				C6B30E0E1DC31E0F0053ED17 /* NSString+Utility.h */,
+				C6B30E0F1DC31E0F0053ED17 /* NSString+Utility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -377,6 +388,8 @@
 				C64418B31DC2FAA900339684 /* CVideoPlayerSpeedMenuView.m */,
 				C64418B41DC2FAA900339684 /* CVideoPlayerViewController.h */,
 				C64418B51DC2FAA900339684 /* CVideoPlayerViewController.m */,
+				C6B30E111DC338870053ED17 /* CVideoFileInfo.h */,
+				C6B30E121DC338870053ED17 /* CVideoFileInfo.m */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -421,10 +434,12 @@
 		C6F80DA91DC1D705002B3AD7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C6F80DAA1DC1D705002B3AD7 /* CFileBrowseViewFileCell.h */,
-				C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m */,
+				C6F80DAA1DC1D705002B3AD7 /* CFileBrowseViewDirectoryCell.h */,
+				C6F80DAB1DC1D705002B3AD7 /* CFileBrowseViewDirectoryCell.m */,
 				C6F80DAC1DC1D705002B3AD7 /* CFileBrowseView.h */,
 				C6F80DAD1DC1D705002B3AD7 /* CFileBrowseView.m */,
+				C6B30E0B1DC3185A0053ED17 /* CFileBrowseViewVideoFileCell.h */,
+				C6B30E0C1DC3185A0053ED17 /* CFileBrowseViewVideoFileCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,7 +490,7 @@
 		C63D51581DBF532400269CC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Chentao;
 				TargetAttributes = {
 					C63D515F1DBF532400269CC4 = {
@@ -571,6 +586,7 @@
 				C6D1114E1DC0857B00BAB6ED /* NSObject+CEventDispatcher.m in Sources */,
 				C6F80DD11DC20D12002B3AD7 /* CLoadingHUDIndicatorView.m in Sources */,
 				C6D111751DC0928400BAB6ED /* AppDelegate.m in Sources */,
+				C6B30E0D1DC3185A0053ED17 /* CFileBrowseViewVideoFileCell.m in Sources */,
 				C6F80DD31DC20D12002B3AD7 /* CSuccessHUDIndicatorView.m in Sources */,
 				C6F80DB31DC1D722002B3AD7 /* CFile.m in Sources */,
 				C6D111601DC0857B00BAB6ED /* NSTimer+Activate.m in Sources */,
@@ -593,8 +609,10 @@
 				C6D111561DC0857B00BAB6ED /* CCycleScrollView.m in Sources */,
 				C6D1115F1DC0857B00BAB6ED /* NSMutableDictionary+SetValue.m in Sources */,
 				C6D1115C1DC0857B00BAB6ED /* UIView+LayoutElement.m in Sources */,
+				C6B30E131DC338870053ED17 /* CVideoFileInfo.m in Sources */,
 				C6D111541DC0857B00BAB6ED /* IMRadioButton.m in Sources */,
-				C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewFileCell.m in Sources */,
+				C6B30E101DC31E0F0053ED17 /* NSString+Utility.m in Sources */,
+				C6F80DAF1DC1D705002B3AD7 /* CFileBrowseViewDirectoryCell.m in Sources */,
 				C6D111531DC0857B00BAB6ED /* IMCheckBox.m in Sources */,
 				C64418BA1DC2FAA900339684 /* CVideoPlayerViewController.m in Sources */,
 				C6D1115B1DC0857B00BAB6ED /* HBox.m in Sources */,
@@ -629,6 +647,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -676,6 +695,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

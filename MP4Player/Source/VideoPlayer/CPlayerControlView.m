@@ -70,7 +70,12 @@
 }
 
 - (void)initData {
-    NSArray *speeds = [NSArray arrayWithObjects:[NSNumber numberWithFloat:2.0], [NSNumber numberWithFloat:1.5], [NSNumber numberWithFloat:1.3], [NSNumber numberWithFloat:1.0], nil];
+    NSArray *speeds = [NSArray arrayWithObjects:
+                       [NSNumber numberWithFloat:1.8],
+                       [NSNumber numberWithFloat:1.6],
+                       [NSNumber numberWithFloat:1.4],
+                       [NSNumber numberWithFloat:1.2],
+                       [NSNumber numberWithFloat:1.0], nil];
     self.speedArray = [NSMutableArray arrayWithCapacity:speeds.count];
 
     CVideoPlayerSpeedMenuItem *defaultSelecteItem;
@@ -197,10 +202,10 @@
     [self.indicatorView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.loadingView addSubview:self.indicatorView];
 
-    CGFloat titleBarHeight = 44;
+    CGFloat titleBarHeight = 44.0;
 
     self.titleBar = [[Group alloc] init];
-    self.titleBar.backgroundColor = [ColorMake(0xFFFFFF) colorWithAlphaComponent:0.96];
+    self.titleBar.backgroundColor = [ColorMake(0xFFFFFF) colorWithAlphaComponent:0.8];
     self.titleBar.layout_height = titleBarHeight;
     self.titleBar.includeInLayout = YES;
     self.titleBar.layout_top = [NSNumber numberWithFloat:0.0];
@@ -659,8 +664,8 @@
 }
 
 - (void)setTime:(NSTimeInterval)currentTime duration:(NSTimeInterval)duration {
-    NSString *currentTimeText = [self timeIntervalFormat:currentTime];
-    NSString *durationText = [self timeIntervalFormat:duration];
+    NSString *currentTimeText = [NSString timeIntervalFormat:currentTime];
+    NSString *durationText = [NSString timeIntervalFormat:duration];
 
     NSString *timeText = [NSString stringWithFormat:@"%@/%@", currentTimeText, durationText];
 
@@ -676,29 +681,29 @@
     self.progress = progress;
 }
 
-- (NSString *)timeIntervalFormat:(unsigned long long)time {
-    unsigned long long second = time % 60;
-    unsigned long long minute = (time / 60) % 60;
-    unsigned long long hour = time / 3600;
-
-    NSString *secondText = [NSString stringWithFormat:@"%llu", second];
-    if (second < 10) {
-        secondText = [NSString stringWithFormat:@"0%llu", second];
-    }
-
-    NSString *minuteText = [NSString stringWithFormat:@"%llu", minute];
-    if (minute < 10) {
-        minuteText = [NSString stringWithFormat:@"0%llu", minute];
-    }
-
-    NSString *hourText = [NSString stringWithFormat:@"%llu", hour];
-    if (hour < 10) {
-        hourText = [NSString stringWithFormat:@"0%llu", hour];
-    }
-
-    NSString *timeText = [NSString stringWithFormat:@"%@:%@:%@", hourText, minuteText, secondText];
-    return timeText;
-}
+//- (NSString *)timeIntervalFormat:(unsigned long long)time {
+//    unsigned long long second = time % 60;
+//    unsigned long long minute = (time / 60) % 60;
+//    unsigned long long hour = time / 3600;
+//
+//    NSString *secondText = [NSString stringWithFormat:@"%llu", second];
+//    if (second < 10) {
+//        secondText = [NSString stringWithFormat:@"0%llu", second];
+//    }
+//
+//    NSString *minuteText = [NSString stringWithFormat:@"%llu", minute];
+//    if (minute < 10) {
+//        minuteText = [NSString stringWithFormat:@"0%llu", minute];
+//    }
+//
+//    NSString *hourText = [NSString stringWithFormat:@"%llu", hour];
+//    if (hour < 10) {
+//        hourText = [NSString stringWithFormat:@"0%llu", hour];
+//    }
+//
+//    NSString *timeText = [NSString stringWithFormat:@"%@:%@:%@", hourText, minuteText, secondText];
+//    return timeText;
+//}
 
 - (void)destroy {
     [self stopTimer];

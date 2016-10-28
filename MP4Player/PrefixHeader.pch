@@ -26,5 +26,6 @@
 #import "Group.h"
 #import "HBox.h"
 #import "VBox.h"
+#import "NSString+Utility.h"
 
 #endif /* PrefixHeader_pch */

@@ -26,14 +26,14 @@
 }
 
 -(void)createSubviews{
-    CGFloat topViewHeight=70;
+    //CGFloat topViewHeight=70;
     
     _fileListView=[[CTableView alloc]init];
     _fileListView.backgroundColor=AntiFlashWhiteColor;
     _fileListView.includeInLayout=YES;
     _fileListView.layout_left=[NSNumber numberWithFloat:0.0];
     _fileListView.layout_right=[NSNumber numberWithFloat:0.0];
-    _fileListView.layout_top=[NSNumber numberWithFloat:topViewHeight];
+    _fileListView.layout_top=[NSNumber numberWithFloat:TopViewHeight];
     _fileListView.layout_bottom=[NSNumber numberWithFloat:0.0];
     [self addSubview:_fileListView];
     
@@ -42,7 +42,7 @@
     topView.layer.shadowOffset=CGSizeMake(0, 4);
     topView.layer.shadowOpacity = 0.4;
     topView.backgroundColor=CeruleanColor;
-    topView.layout_height=topViewHeight;
+    topView.layout_height=TopViewHeight;
     topView.includeInLayout=YES;
     topView.layout_left=[NSNumber numberWithFloat:0.0];
     topView.layout_right=[NSNumber numberWithFloat:0.0];

@@ -100,7 +100,6 @@ static bool isFirstAccess = YES;
         JGProgressHUDFadeAnimation *animation = [JGProgressHUDFadeAnimation animation];
         hud.animation = animation;
         
-        // toastView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
         hud.HUDView.backgroundColor = [UIColor whiteColor];
         hud.HUDView.layer.shadowColor = [UIColor blackColor].CGColor;
         hud.HUDView.layer.shadowOffset = CGSizeMake(0, 2);

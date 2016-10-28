@@ -9,10 +9,10 @@
 #import "CTableViewCell.h"
 #import "CFile.h"
 
-#define FileBrowseViewFileCell_Identifier @"CFileBrowseViewFileCell"
+#define FileBrowseViewDirectoryCell_Identifier @"CFileBrowseViewDirectoryCell"
 
 
-@interface CFileBrowseViewFileCell : CTableViewCell
+@interface CFileBrowseViewDirectoryCell : CTableViewCell
 
 
 @end

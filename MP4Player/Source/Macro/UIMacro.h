@@ -9,7 +9,7 @@
 #ifndef UIMacro_h
 #define UIMacro_h
 
-#define TabBarHeight 50.0f
+#define TopViewHeight 70.0f
 
 #define PageLeftPadding 18.0
 
@@ -24,6 +24,8 @@
 #define AntiFlashWhiteColor  ColorMake(0xF2F5F7)
 
 #define SteelColor  ColorMake(0x666666)
+
+#define LightGrayColor  ColorMake(0xAAAAAA)
 
 
 #endif /* UIMacro_h */
